@@ -24,10 +24,15 @@ class AdminPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+            ->favicon(asset('LOGO.svg'))
             ->default()
             ->id('admin')
             ->path('admin')
             ->login()
+            ->passwordReset()
+            ->emailVerification()
+            ->profile()
+//            ->registration()
             ->colors([
                 'primary' => Color::Green,
             ])
@@ -56,7 +61,8 @@ class AdminPanelProvider extends PanelProvider
                 Authenticate::class,
             ])
             ->plugins([
-                LightSwitchPlugin::make()
+                LightSwitchPlugin::make(),
+//                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
             ]);
     }
 }

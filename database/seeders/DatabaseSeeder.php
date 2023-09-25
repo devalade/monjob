@@ -15,6 +15,10 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
+        $this->call(MissionCategorySeeder::class);
+        $this->call(MissionStatusSeeder::class);
+        $this->call(UserMissionStatusSeeder::class);
+
          \App\Models\User::factory()->create([
              'name' => 'Alade Yessoufou',
              'email' => 'aladecharaf23@gmail.com',
