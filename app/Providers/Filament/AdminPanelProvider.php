@@ -24,6 +24,7 @@ class AdminPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+            ->topNavigation()
             ->favicon(asset('LOGO.svg'))
             ->default()
             ->id('admin')
@@ -33,6 +34,8 @@ class AdminPanelProvider extends PanelProvider
             ->emailVerification()
             ->profile()
 //            ->registration()
+            ->databaseNotifications()
+            ->databaseNotificationsPolling('30s')
             ->colors([
                 'primary' => Color::Green,
             ])

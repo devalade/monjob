@@ -13,6 +13,7 @@
         "bezhansalleh/filament-shield": "^3.0",
         "filament/filament": "^3.0-stable",
         "guzzlehttp/guzzle": "^7.2",
+        "koossaayy/laravel-mapbox": "^0.4.3",
         "laravel/fortify": "^1.18",
         "laravel/framework": "^10.10",
         "laravel/jetstream": "^4.0",
