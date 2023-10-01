@@ -8,8 +8,17 @@ class MapBox extends Field
 {
     protected string $view = 'forms.components.map-box';
 
-    public function getMapBoxToken(): ?string {
-        return env('MAPBOX_TOKEN');
+    protected int|\Closure $zoom = 9;
+
+    public function zoom(int | \Closure | null $zoom): static
+    {
+        $this->zoom = $zoom;
+        return $this;
+    }
+
+    public function getZoom(): int
+    {
+        return $this->evaluate($this->zoom);
     }
 
 }

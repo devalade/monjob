@@ -27,6 +27,7 @@ class MissionResource extends Resource
     {
         return $infolist->schema([
             TextEntry::make('location')
+            ->label('Location')
         ]);
     }
 
